@@ -18,13 +18,11 @@ export class MaytinhComponent implements OnInit {
   }
 
   public getNumber(v: string) {
-    console.log(v);
     if (this.waitForSecondNumber) {
       this.currentNumber = v;
       this.waitForSecondNumber = false;
     } else {
       this.currentNumber === '0' ? this.currentNumber = v : this.currentNumber += v;
-
     }
   }
 
@@ -55,8 +53,6 @@ export class MaytinhComponent implements OnInit {
   }
 
   public getOperation(op: string) {
-    console.log(op);
-
     if (this.firstOperand === null) {
       // @ts-ignore
       this.firstOperand = Number(this.currentNumber);
